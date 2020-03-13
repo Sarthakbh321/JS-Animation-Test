@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    color: white;
+
+    align-items: center;
+
+    min-height: 10vh;
+}
+
+.logo {
+    grid-column: 2/3;
+}
+
+section {
+    display: flex;
+    height: 80vh;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image {
+    height: 70%;
+    width: 100%;
+
+    position: relative;
+}
+
+section img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: rgb(166,3,3);
+    background: linear-gradient(90deg, rgba(166,3,3,1) 0%, rgba(191,55,55,1) 51%, rgba(115,0,0,1) 100%);
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: -1;
+}
+
+.headline {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+
+    color: white;
+    font-size: 3em;
+
+    z-index: 3;
+}
+
+.image::after {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0.5;
+}
